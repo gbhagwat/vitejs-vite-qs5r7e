@@ -28,7 +28,6 @@ roleHolders.forEach((usr) => {
 
   // users = users.sort((a, b) => a.firstName.localeCompare(b.firstName))
   // users = users.sort((a, b) => a.lastName.localeCompare(b.lastName))
-  
 
   const map = new Map();
   users.sort((a, b) => a.firstName.localeCompare(b.firstName))
@@ -42,11 +41,9 @@ roleHolders.forEach((usr) => {
 const list = Array.from(users.values());
 console.log(list)
 
-  // display name can be shown in svelte ui {firstName} {lastName}
-
 </script>
 
-<ul>
+<ul class="p-5 text-4xl underline decoration-double uppercase">
 {#each list as item}
   <li>
   {item.displayName}
